@@ -1,5 +1,5 @@
 #include <iostream>
-#include "grid.h"
+#include "Grid.h"
 #include "../colors/Colors.h"
 
 Grid::Grid()

@@ -1,5 +1,5 @@
 #include <raylib.h>
-#include "grid/grid.h"
+#include "grid/Grid.h"
 #include "blocks/TypesOfBlocks/cpp/L_Block.cpp"
 #include "blocks/TypesOfBlocks/cpp/J_Block.cpp"
 #include "blocks/TypesOfBlocks/cpp/I_Block.cpp"
