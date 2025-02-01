@@ -1,0 +1,3 @@
+P:/1.From Git/Game C++/Tetris/build/CMakeFiles/Tetris.dir
+P:/1.From Git/Game C++/Tetris/build/CMakeFiles/edit_cache.dir
+P:/1.From Git/Game C++/Tetris/build/CMakeFiles/rebuild_cache.dir
