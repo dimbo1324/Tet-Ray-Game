@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <raylib.h>
+#include "../utils/types/Types.h"
 
 
 class Grid
@@ -14,9 +15,9 @@ class Grid
 
         void DrawGrid();
 
-        int grid[20][10];
+        uint grid[20][10];
 
     private:
-        unsigned int numRows, numCols, cellSize;
+        uint numRows, numCols, cellSize;
         std::vector<Color> colors;
     };

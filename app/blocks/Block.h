@@ -1,8 +1,10 @@
 #pragma once
+
 #include  <vector>
 #include <map>
 #include "../colors/Colors.h"
 #include "../positions/Position.h"
+#include "../utils/types/Types.h"
 
 
 class Block
@@ -12,11 +14,13 @@ class Block
 
         void DrawBlock();
 
-        int id;
+        void Move(uint r, uint c);
 
-        std::map<int, std::vector<Position> > cells;
+        uint id;
+
+        std::map<uint, std::vector<Position> > cells;
 
     private:
-        unsigned int cellSize, rotationState;
+        uint cellSize, rotationState, rowOffset, colOffset;
         std::vector<Color> colors;
     };

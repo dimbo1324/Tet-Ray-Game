@@ -344,29 +344,29 @@ app/colors/Colors.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/colors/Colors.cpp.s
 .PHONY : app/colors/Colors.cpp.s
 
-app/grid/grid.obj: app/grid/grid.cpp.obj
-.PHONY : app/grid/grid.obj
+app/grid/Grid.obj: app/grid/Grid.cpp.obj
+.PHONY : app/grid/Grid.obj
 
 # target to build an object file
-app/grid/grid.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/grid/grid.cpp.obj
-.PHONY : app/grid/grid.cpp.obj
+app/grid/Grid.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj
+.PHONY : app/grid/Grid.cpp.obj
 
-app/grid/grid.i: app/grid/grid.cpp.i
-.PHONY : app/grid/grid.i
+app/grid/Grid.i: app/grid/Grid.cpp.i
+.PHONY : app/grid/Grid.i
 
 # target to preprocess a source file
-app/grid/grid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/grid/grid.cpp.i
-.PHONY : app/grid/grid.cpp.i
+app/grid/Grid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/grid/Grid.cpp.i
+.PHONY : app/grid/Grid.cpp.i
 
-app/grid/grid.s: app/grid/grid.cpp.s
-.PHONY : app/grid/grid.s
+app/grid/Grid.s: app/grid/Grid.cpp.s
+.PHONY : app/grid/Grid.s
 
 # target to generate assembly for a file
-app/grid/grid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/grid/grid.cpp.s
-.PHONY : app/grid/grid.cpp.s
+app/grid/Grid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/grid/Grid.cpp.s
+.PHONY : app/grid/Grid.cpp.s
 
 app/main.obj: app/main.cpp.obj
 .PHONY : app/main.obj
@@ -452,9 +452,9 @@ help:
 	@echo ... app/colors/Colors.obj
 	@echo ... app/colors/Colors.i
 	@echo ... app/colors/Colors.s
-	@echo ... app/grid/grid.obj
-	@echo ... app/grid/grid.i
-	@echo ... app/grid/grid.s
+	@echo ... app/grid/Grid.obj
+	@echo ... app/grid/Grid.i
+	@echo ... app/grid/Grid.s
 	@echo ... app/main.obj
 	@echo ... app/main.i
 	@echo ... app/main.s

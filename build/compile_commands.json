@@ -7,9 +7,9 @@
 },
 {
   "directory": "P:/1.From Git/Game C++/Tetris/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\app\\grid\\grid.cpp.obj -c \"P:\\1.From Git\\Game C++\\Tetris\\app\\grid\\grid.cpp\"",
-  "file": "P:/1.From Git/Game C++/Tetris/app/grid/grid.cpp",
-  "output": "CMakeFiles/Tetris.dir/app/grid/grid.cpp.obj"
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\app\\grid\\Grid.cpp.obj -c \"P:\\1.From Git\\Game C++\\Tetris\\app\\grid\\Grid.cpp\"",
+  "file": "P:/1.From Git/Game C++/Tetris/app/grid/Grid.cpp",
+  "output": "CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj"
 },
 {
   "directory": "P:/1.From Git/Game C++/Tetris/build",

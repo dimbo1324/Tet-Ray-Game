@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Grid.h"
 #include "../colors/Colors.h"
+#include "../utils/types/Types.h"
 
 Grid::Grid()
     {
@@ -13,9 +14,9 @@ Grid::Grid()
 
 void Grid::Initialize()
     {
-        for (int r = 0; r < numRows; r++)
+        for (uint r = 0; r < numRows; r++)
             {
-                for (int c = 0; c < numCols; c++)
+                for (uint c = 0; c < numCols; c++)
                     {
                         grid[r][c] = 0;
                     }
@@ -24,9 +25,9 @@ void Grid::Initialize()
 
 void Grid::PrintGrid()
     {
-        for (int r = 0; r < numRows; r++)
+        for (uint r = 0; r < numRows; r++)
             {
-                for (int c = 0; c < numCols; c++)
+                for (uint c = 0; c < numCols; c++)
                     {
                         std::cout << grid[r][c] << " ";
                     }
@@ -37,11 +38,11 @@ void Grid::PrintGrid()
 
 void Grid::DrawGrid()
     {
-        for (int r = 0; r < numRows; r++)
+        for (uint r = 0; r < numRows; r++)
             {
-                for (int c = 0; c < numCols; c++)
+                for (uint c = 0; c < numCols; c++)
                     {
-                        int cellValue = grid[r][c];
+                        uint cellValue = grid[r][c];
                         DrawRectangle(c * cellSize + 1, r * cellSize + 1, cellSize - 1,
                                       cellSize - 1,
                                       colors[cellValue]);

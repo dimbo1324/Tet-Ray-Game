@@ -1,3 +1,4 @@
+#include <iostream>
 #include <raylib.h>
 #include "grid/Grid.h"
 #include "blocks/TypesOfBlocks/cpp/L_Block.cpp"
@@ -7,12 +8,16 @@
 #include "blocks/TypesOfBlocks/cpp/S_Block.cpp"
 #include "blocks/TypesOfBlocks/cpp/T_Block.cpp"
 #include "blocks/TypesOfBlocks/cpp/Z_Block.cpp"
+#include "utils/types/Types.h"
 
 
 int main()
     {
+        // int a = 0;
+        // std::cout << a << std::endl;
+
         Color backgroundColor = {10, 120, 156, 124};
-        short int rectangleSide = 300;
+        sint rectangleSide = 300;
         InitWindow(rectangleSide, rectangleSide * 2, "Tetris by C++");
         SetTargetFPS(60);
         Grid grid = Grid();
