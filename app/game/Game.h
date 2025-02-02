@@ -11,7 +11,7 @@ class Game
     public:
         Game();
 
-        Block getRandomBlock();
+        ~Game();
 
         static std::vector<Block> getAllBlocks();
 
@@ -19,15 +19,19 @@ class Game
 
         void handleInput();
 
-        void moveBlockLeft();
-
-        void moveBlockRight();
-
         void moveBlockDown();
 
         bool gameOver;
 
+        int gameScore;
+
+        Music music;
+
     private:
+        void moveBlockLeft();
+
+        void moveBlockRight();
+
         bool isBlockOutside() const;
 
         void rotateBlock();
@@ -36,10 +40,15 @@ class Game
 
         bool blockFits() const;
 
-        void Reset();
+        void reset();
+
+        void updateScore(int linesCleared, int moveDownPoints);
+
+        Block getRandomBlock();
 
         Grid grid;
         std::vector<Block> blocks;
         Block currentBlock, nextBlock;
         std::mt19937 randomEngine;
+        Sound rotateSound, clearSound;
     };

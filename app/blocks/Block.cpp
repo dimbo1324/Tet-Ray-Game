@@ -12,14 +12,14 @@ Block::Block()
       colors(GetCellColors())
     {}
 
-void Block::draw() const
+void Block::draw(int offsetX, int offsetY) const
     {
         std::vector<Position> tiles = getCellsPositions();
 
         for (const auto &pos: tiles)
             {
-                DrawRectangle(static_cast<int>(pos.col) * cellSize + extraPixelsPositionValue,
-                              static_cast<int>(pos.row) * cellSize + extraPixelsPositionValue,
+                DrawRectangle(static_cast<int>(pos.col) * cellSize + offsetX,
+                              static_cast<int>(pos.row) * cellSize + offsetY,
                               cellSize - 1,
                               cellSize - 1,
                               colors.at(id));

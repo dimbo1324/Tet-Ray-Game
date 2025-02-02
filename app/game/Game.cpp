@@ -2,6 +2,7 @@
 #include "../blocks/StorageOfBlocks.cpp"
 #include <stdexcept>
 #include <algorithm>
+#include "../game property/constants.h"
 
 Game::Game()
     : grid(),
@@ -11,6 +12,20 @@ Game::Game()
         currentBlock = getRandomBlock();
         nextBlock = getRandomBlock();
         gameOver = false;
+        gameScore = 0;
+        InitAudioDevice();
+        music = LoadMusicStream("../../../Tetris/sounds/music.mp3");
+        PlayMusicStream(music);
+        rotateSound = LoadSound("../../../Tetris/sounds/rotate.mp3");
+        clearSound = LoadSound("../../../Tetris/sounds/clear.mp3");
+    }
+
+Game::~Game()
+    {
+        UnloadSound(rotateSound);
+        UnloadSound(clearSound);
+        UnloadMusicStream(music);
+        CloseAudioDevice();
     }
 
 Block Game::getRandomBlock()
@@ -34,7 +49,19 @@ std::vector<Block> Game::getAllBlocks()
 void Game::draw()
     {
         grid.drawGrid();
-        currentBlock.draw();
+        currentBlock.draw(extraPixelsPositionValue, extraPixelsPositionValue);
+        switch (nextBlock.id)
+            {
+                case 3:
+                    nextBlock.draw(255, 290);
+                    break;
+                case 4:
+                    nextBlock.draw(255, 280);
+                    break;
+                default:
+                    nextBlock.draw(270, 270);
+                    break;
+            }
     }
 
 void Game::handleInput()
@@ -43,7 +70,7 @@ void Game::handleInput()
         if (gameOver && (key == KEY_SPACE || key == KEY_ENTER))
             {
                 gameOver = false;
-                Reset();
+                reset();
             }
 
         switch (key)
@@ -56,6 +83,7 @@ void Game::handleInput()
                     break;
                 case KEY_DOWN:
                     moveBlockDown();
+                    updateScore(0, 1);
                     break;
                 case KEY_UP:
                     rotateBlock();
@@ -121,6 +149,9 @@ void Game::rotateBlock()
                 if (isBlockOutside() || !blockFits())
                     {
                         currentBlock.undoRotation();
+                    } else
+                    {
+                        PlaySound(rotateSound);
                     }
             }
     }
@@ -138,7 +169,12 @@ void Game::lockBlock()
                 gameOver = true;
             }
         nextBlock = getRandomBlock();
-        grid.clearFullRows();
+        int rowCleared = grid.clearFullRows();
+        if (rowCleared > 0)
+            {
+                PlaySound(clearSound);
+                updateScore(rowCleared, 0);
+            }
     }
 
 
@@ -152,10 +188,30 @@ bool Game::blockFits() const
                                });
     }
 
-void Game::Reset()
+void Game::reset()
     {
         grid.initialize();
         blocks = getAllBlocks();
         currentBlock = getRandomBlock();
         nextBlock = getRandomBlock();
+        gameScore = 0;
+    }
+
+void Game::updateScore(int linesCleared, int moveDownPoints)
+    {
+        switch (linesCleared)
+            {
+                case 1:
+                    gameScore += 100;
+                    break;
+                case 2:
+                    gameScore += 300;
+                    break;
+                case 3:
+                    gameScore += 500;
+                    break;
+                default:
+                    break;
+            }
+        gameScore += moveDownPoints;
     }

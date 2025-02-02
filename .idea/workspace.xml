@@ -25,34 +25,26 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc0c7ddb-0572-4b25-b0fe-d530ff4afb3f" name="Changes" comment="Организовано условие перезагрузки игры при помощи Enter и Space">
+    <list default="true" id="bc0c7ddb-0572-4b25-b0fe-d530ff4afb3f" name="Changes" comment="Сделал отдельный файл для констант:&#10;&#10;#ifndef CONSTANTS_H&#10;#define CONSTANTS_H&#10;&#10;#include &lt;raylib.h&gt;&#10;&#10;constexpr int cellSizeValue = 30;&#10;constexpr int rectangleHorizontalSideValue = static_cast&lt;int&gt;(cellSizeValue * (500.0 /&#10;                                                                  cellSizeValue));&#10;constexpr int rectangleVerticalSideValue = static_cast&lt;int&gt;(cellSizeValue * (620.0 /&#10;                                                                cellSizeValue));&#10;constexpr int extraPixelsPositionValue = 11;&#10;constexpr int numColsValue = static_cast&lt;int&gt;(cellSizeValue / 3.0);&#10;constexpr int numRowsValue = 2 * numColsValue;&#10;constexpr int targetFPSValue = 60;&#10;constexpr double gameSpeedValue = 0.3;&#10;constexpr Color backgroundColorValue = {10, 120, 156, 124};&#10;inline double lastUpdateTimeValue = 0.0;&#10;&#10;#endif">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blocks/Block.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/blocks/Block.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/game property/constants.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blocks/Block.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/blocks/Block.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/colors/Colors.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/colors/Colors.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/colors/Colors.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/colors/Colors.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/game property/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/game property/constants.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/grid/Grid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/grid/Grid.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/game/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/game/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/game/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/game/Game.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-56f7edd7044b4212505e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-02-02T14-37-05-0973.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Tetris-Debug-33726175d4d000e1d02f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/game_property/constants.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/game_property/constants.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/game/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/game/Game.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/game/Game.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/game/Game.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/main.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Tetris.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Tetris.exe" afterDir="false" />
     </list>
@@ -136,7 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1738503025017</updated>
       <workItem from="1738503026761" duration="2265000" />
-      <workItem from="1738505819864" duration="3098000" />
+      <workItem from="1738505819864" duration="4935000" />
     </task>
     <task id="LOCAL-00001" summary="Удаление беззнакового типа">
       <option name="closed" value="true" />
@@ -170,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738507889416</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Сделал отдельный файл для констант:&#10;&#10;#ifndef CONSTANTS_H&#10;#define CONSTANTS_H&#10;&#10;#include &lt;raylib.h&gt;&#10;&#10;constexpr int cellSizeValue = 30;&#10;constexpr int rectangleHorizontalSideValue = static_cast&lt;int&gt;(cellSizeValue * (500.0 /&#10;                                                                  cellSizeValue));&#10;constexpr int rectangleVerticalSideValue = static_cast&lt;int&gt;(cellSizeValue * (620.0 /&#10;                                                                cellSizeValue));&#10;constexpr int extraPixelsPositionValue = 11;&#10;constexpr int numColsValue = static_cast&lt;int&gt;(cellSizeValue / 3.0);&#10;constexpr int numRowsValue = 2 * numColsValue;&#10;constexpr int targetFPSValue = 60;&#10;constexpr double gameSpeedValue = 0.3;&#10;constexpr Color backgroundColorValue = {10, 120, 156, 124};&#10;inline double lastUpdateTimeValue = 0.0;&#10;&#10;#endif">
+      <option name="closed" value="true" />
+      <created>1738510123256</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738510123256</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +196,7 @@
     <MESSAGE value="Удаление беззнакового типа" />
     <MESSAGE value="Организовано условие окончания игры" />
     <MESSAGE value="Организовано условие перезагрузки игры при помощи Enter и Space" />
-    <option name="LAST_COMMIT_MESSAGE" value="Организовано условие перезагрузки игры при помощи Enter и Space" />
+    <MESSAGE value="Сделал отдельный файл для констант:&#10;&#10;#ifndef CONSTANTS_H&#10;#define CONSTANTS_H&#10;&#10;#include &lt;raylib.h&gt;&#10;&#10;constexpr int cellSizeValue = 30;&#10;constexpr int rectangleHorizontalSideValue = static_cast&lt;int&gt;(cellSizeValue * (500.0 /&#10;                                                                  cellSizeValue));&#10;constexpr int rectangleVerticalSideValue = static_cast&lt;int&gt;(cellSizeValue * (620.0 /&#10;                                                                cellSizeValue));&#10;constexpr int extraPixelsPositionValue = 11;&#10;constexpr int numColsValue = static_cast&lt;int&gt;(cellSizeValue / 3.0);&#10;constexpr int numRowsValue = 2 * numColsValue;&#10;constexpr int targetFPSValue = 60;&#10;constexpr double gameSpeedValue = 0.3;&#10;constexpr Color backgroundColorValue = {10, 120, 156, 124};&#10;inline double lastUpdateTimeValue = 0.0;&#10;&#10;#endif" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал отдельный файл для констант:&#10;&#10;#ifndef CONSTANTS_H&#10;#define CONSTANTS_H&#10;&#10;#include &lt;raylib.h&gt;&#10;&#10;constexpr int cellSizeValue = 30;&#10;constexpr int rectangleHorizontalSideValue = static_cast&lt;int&gt;(cellSizeValue * (500.0 /&#10;                                                                  cellSizeValue));&#10;constexpr int rectangleVerticalSideValue = static_cast&lt;int&gt;(cellSizeValue * (620.0 /&#10;                                                                cellSizeValue));&#10;constexpr int extraPixelsPositionValue = 11;&#10;constexpr int numColsValue = static_cast&lt;int&gt;(cellSizeValue / 3.0);&#10;constexpr int numRowsValue = 2 * numColsValue;&#10;constexpr int targetFPSValue = 60;&#10;constexpr double gameSpeedValue = 0.3;&#10;constexpr Color backgroundColorValue = {10, 120, 156, 124};&#10;inline double lastUpdateTimeValue = 0.0;&#10;&#10;#endif" />
   </component>
 </project>

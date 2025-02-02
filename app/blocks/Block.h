@@ -14,7 +14,7 @@ class Block
     public:
         Block();
 
-        void draw() const;
+        void draw(int offsetX, int offsetY) const;
 
         void move(int rowDelta, int colDelta);
 
