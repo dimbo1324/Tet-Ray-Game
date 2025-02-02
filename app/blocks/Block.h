@@ -10,13 +10,15 @@
 class Block
     {
     public:
+        uint id;
+
         Block();
 
         void DrawBlock();
 
         void Move(uint r, uint c);
 
-        uint id;
+        std::vector<Position> GetCellsPositions();
 
         std::map<uint, std::vector<Position> > cells;
 

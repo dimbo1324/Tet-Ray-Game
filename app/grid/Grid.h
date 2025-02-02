@@ -15,6 +15,7 @@ class Grid
 
         void DrawGrid();
 
+
         uint grid[20][10];
 
     private:

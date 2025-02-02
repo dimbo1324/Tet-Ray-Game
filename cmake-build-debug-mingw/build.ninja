@@ -133,6 +133,13 @@ build CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/Z_Block.cpp.obj: CXX_CO
   OBJECT_DIR = CMakeFiles\Tetris.dir
   OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp
 
+build CMakeFiles/Tetris.dir/app/game/Game.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/game/Game.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\game\Game.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\game
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Tetris
@@ -141,7 +148,7 @@ build CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/Z_Block.cpp.obj: CXX_CO
 #############################################
 # Link the executable Tetris.exe
 
-build Tetris.exe: CXX_EXECUTABLE_LINKER__Tetris_Debug CMakeFiles/Tetris.dir/app/main.cpp.obj CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj CMakeFiles/Tetris.dir/app/positions/Position.cpp.obj CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/L_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/J_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/I_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/O_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/S_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/T_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/Z_Block.cpp.obj | P$:/1.From$ Git/_LIBS/raylib-master/build/raylib/libraylib.a
+build Tetris.exe: CXX_EXECUTABLE_LINKER__Tetris_Debug CMakeFiles/Tetris.dir/app/main.cpp.obj CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj CMakeFiles/Tetris.dir/app/positions/Position.cpp.obj CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/L_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/J_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/I_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/O_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/S_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/T_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/Z_Block.cpp.obj CMakeFiles/Tetris.dir/app/game/Game.cpp.obj | P$:/1.From$ Git/_LIBS/raylib-master/build/raylib/libraylib.a
   FLAGS = -g
   LINK_LIBRARIES = "P:/1.From Git/_LIBS/raylib-master/build/raylib/libraylib.a"  -lopengl32  -lgdi32  -lwinmm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -L"P:/1.From Git/_LIBS/raylib-master/build/raylib"

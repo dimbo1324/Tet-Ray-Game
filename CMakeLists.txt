@@ -28,6 +28,8 @@ add_executable(Tetris app/main.cpp
         app/blocks/TypesOfBlocks/cpp/T_Block.cpp
         app/blocks/TypesOfBlocks/cpp/Z_Block.cpp
         app/utils/types/Types.h
+        app/game/Game.cpp
+        app/game/Game.h
 
 )
 
