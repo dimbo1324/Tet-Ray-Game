@@ -66,9 +66,8 @@ CMakeFiles/Tetris.dir/app/blocks/StorageOfBlocks.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_map.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_multimap.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/erase_if.h \
- P:/1.From\ Git/Game\ C++/Tetris/app/colors/Colors.h \
+ P:/1.From\ Git/Game\ C++/Tetris/app/positions/Position.h \
  P:/1.From\ Git/_LIBS/raylib-master/build/raylib/include/raylib.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
  C:/msys64/ucrt64/include/stdarg.h \
- C:/msys64/ucrt64/include/_mingw_stdarg.h \
- P:/1.From\ Git/Game\ C++/Tetris/app/positions/Position.h
+ C:/msys64/ucrt64/include/_mingw_stdarg.h

@@ -152,30 +152,6 @@ app/blocks/Block.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/blocks/Block.cpp.s
 .PHONY : app/blocks/Block.cpp.s
 
-app/blocks/StorageOfBlocks.obj: app/blocks/StorageOfBlocks.cpp.obj
-.PHONY : app/blocks/StorageOfBlocks.obj
-
-# target to build an object file
-app/blocks/StorageOfBlocks.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/blocks/StorageOfBlocks.cpp.obj
-.PHONY : app/blocks/StorageOfBlocks.cpp.obj
-
-app/blocks/StorageOfBlocks.i: app/blocks/StorageOfBlocks.cpp.i
-.PHONY : app/blocks/StorageOfBlocks.i
-
-# target to preprocess a source file
-app/blocks/StorageOfBlocks.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/blocks/StorageOfBlocks.cpp.i
-.PHONY : app/blocks/StorageOfBlocks.cpp.i
-
-app/blocks/StorageOfBlocks.s: app/blocks/StorageOfBlocks.cpp.s
-.PHONY : app/blocks/StorageOfBlocks.s
-
-# target to generate assembly for a file
-app/blocks/StorageOfBlocks.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/blocks/StorageOfBlocks.cpp.s
-.PHONY : app/blocks/StorageOfBlocks.cpp.s
-
 app/colors/Colors.obj: app/colors/Colors.cpp.obj
 .PHONY : app/colors/Colors.obj
 
@@ -308,9 +284,6 @@ help:
 	@echo ... app/blocks/Block.obj
 	@echo ... app/blocks/Block.i
 	@echo ... app/blocks/Block.s
-	@echo ... app/blocks/StorageOfBlocks.obj
-	@echo ... app/blocks/StorageOfBlocks.i
-	@echo ... app/blocks/StorageOfBlocks.s
 	@echo ... app/colors/Colors.obj
 	@echo ... app/colors/Colors.i
 	@echo ... app/colors/Colors.s

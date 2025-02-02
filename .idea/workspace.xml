@@ -26,25 +26,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0c7ddb-0572-4b25-b0fe-d530ff4afb3f" name="Changes" comment="Сделал отдельный файл для констант:&#10;&#10;#ifndef CONSTANTS_H&#10;#define CONSTANTS_H&#10;&#10;#include &lt;raylib.h&gt;&#10;&#10;constexpr int cellSizeValue = 30;&#10;constexpr int rectangleHorizontalSideValue = static_cast&lt;int&gt;(cellSizeValue * (500.0 /&#10;                                                                  cellSizeValue));&#10;constexpr int rectangleVerticalSideValue = static_cast&lt;int&gt;(cellSizeValue * (620.0 /&#10;                                                                cellSizeValue));&#10;constexpr int extraPixelsPositionValue = 11;&#10;constexpr int numColsValue = static_cast&lt;int&gt;(cellSizeValue / 3.0);&#10;constexpr int numRowsValue = 2 * numColsValue;&#10;constexpr int targetFPSValue = 60;&#10;constexpr double gameSpeedValue = 0.3;&#10;constexpr Color backgroundColorValue = {10, 120, 156, 124};&#10;inline double lastUpdateTimeValue = 0.0;&#10;&#10;#endif">
+      <change afterPath="$PROJECT_DIR$/app/game/constants.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blocks/Block.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/blocks/Block.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blocks/Block.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/blocks/Block.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blocks/StorageOfBlocks.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/colors/Colors.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/colors/Colors.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/colors/Colors.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/colors/Colors.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/game property/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/game property/constants.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/game property/constants.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/game/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/game/Game.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/game/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/game/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/grid/Grid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/grid/Grid.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/grid/Grid.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/grid/Grid.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/positions/Position.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/positions/Position.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/positions/Position.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/positions/Position.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-3b5a067bdfbd37a03caa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-02-02T15-22-22-0876.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Tetris-Debug-3c0bbae495bdbb7bba7f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/StorageOfBlocks.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/StorageOfBlocks.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/game/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/game/Game.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/game/Game.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/game/Game.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/main.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/positions/Position.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/positions/Position.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Tetris.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Tetris.exe" afterDir="false" />
     </list>
@@ -57,6 +80,14 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="game-dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
@@ -88,7 +119,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "game-dev",
+    "git-widget-placeholder": "refactor-dev",
     "last_opened_file_path": "P:/1.From Git/Game C++/Tetris/app/game property",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -104,6 +135,7 @@
       <recent name="P:\1.From Git\Game C++\Tetris\app\blocks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="P:\1.From Git\Game C++\Tetris\app\game" />
       <recent name="P:\1.From Git\Game C++\Tetris\app\blocks\TypesOfBlocks\cpp" />
     </key>
   </component>

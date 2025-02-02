@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "P:/1.From Git/Game C++/Tetris/app/blocks/Block.cpp" "CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj" "gcc" "CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj.d"
-  "P:/1.From Git/Game C++/Tetris/app/blocks/StorageOfBlocks.cpp" "CMakeFiles/Tetris.dir/app/blocks/StorageOfBlocks.cpp.obj" "gcc" "CMakeFiles/Tetris.dir/app/blocks/StorageOfBlocks.cpp.obj.d"
   "P:/1.From Git/Game C++/Tetris/app/colors/Colors.cpp" "CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj" "gcc" "CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj.d"
   "P:/1.From Git/Game C++/Tetris/app/game/Game.cpp" "CMakeFiles/Tetris.dir/app/game/Game.cpp.obj" "gcc" "CMakeFiles/Tetris.dir/app/game/Game.cpp.obj.d"
   "P:/1.From Git/Game C++/Tetris/app/grid/Grid.cpp" "CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj" "gcc" "CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj.d"

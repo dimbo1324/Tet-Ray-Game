@@ -1,38 +1,85 @@
-#pragma once
+#ifndef BLOCK_H
+#define BLOCK_H
 
 #include <vector>
 #include <map>
-#include "../colors/Colors.h"
 #include "../positions/Position.h"
+#include <raylib.h>
 
-std::vector<Color> GetCellColors();
-
-void DrawRectangle(int posX, int posY, int width, int height, Color color);
-
-class Block
+namespace tetris
     {
-    public:
-        Block();
+        void DrawRectangleSafe(int posX, int posY, int width, int height, Color color);
 
-        void draw(int offsetX, int offsetY) const;
+        class Block
+            {
+            public:
+                Block();
 
-        void move(int rowDelta, int colDelta);
+                virtual ~Block() = default;
 
-        std::vector<Position> getCellsPositions() const;
+                void draw(int offsetX, int offsetY) const;
 
-        void rotate();
+                void move(int rowDelta, int colDelta);
 
-        void undoRotation();
+                std::vector<Position> getCellsPositions() const;
 
-        int id;
+                void rotate();
 
-        std::map<int, std::vector<Position> > cells;
+                void undoRotation();
 
-    private:
-        int cellSize;
-        int rotationState;
-        int rowOffset;
-        int colOffset;
+                int id = 0;
 
-        std::vector<Color> colors;
-    };
+                std::map<int, std::vector<Position> > cells;
+
+            protected:
+                int cellSize;
+                int rotationState;
+                int rowOffset;
+                int colOffset;
+                std::vector<Color> colors;
+            };
+
+        class I_Block : public Block
+            {
+            public:
+                I_Block();
+            };
+
+        class J_Block : public Block
+            {
+            public:
+                J_Block();
+            };
+
+        class L_Block : public Block
+            {
+            public:
+                L_Block();
+            };
+
+        class O_Block : public Block
+            {
+            public:
+                O_Block();
+            };
+
+        class S_Block : public Block
+            {
+            public:
+                S_Block();
+            };
+
+        class T_Block : public Block
+            {
+            public:
+                T_Block();
+            };
+
+        class Z_Block : public Block
+            {
+            public:
+                Z_Block();
+            };
+    }
+
+#endif

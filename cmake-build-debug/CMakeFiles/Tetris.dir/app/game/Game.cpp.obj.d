@@ -59,10 +59,6 @@ CMakeFiles/Tetris.dir/app/game/Game.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator_args.h \
  C:/msys64/ucrt64/include/c++/13.2.0/tuple \
- P:/1.From\ Git/_LIBS/raylib-master/build/raylib/include/raylib.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
- C:/msys64/ucrt64/include/stdarg.h \
- C:/msys64/ucrt64/include/_mingw_stdarg.h \
  C:/msys64/ucrt64/include/c++/13.2.0/random \
  C:/msys64/ucrt64/include/c++/13.2.0/cmath \
  C:/msys64/ucrt64/include/math.h \
@@ -145,10 +141,13 @@ CMakeFiles/Tetris.dir/app/game/Game.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_map.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_multimap.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/erase_if.h \
- P:/1.From\ Git/Game\ C++/Tetris/app/colors/Colors.h \
  P:/1.From\ Git/Game\ C++/Tetris/app/positions/Position.h \
+ P:/1.From\ Git/_LIBS/raylib-master/build/raylib/include/raylib.h \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+ C:/msys64/ucrt64/include/stdarg.h \
+ C:/msys64/ucrt64/include/_mingw_stdarg.h \
  P:/1.From\ Git/Game\ C++/Tetris/app/grid/Grid.h \
- P:/1.From\ Git/Game\ C++/Tetris/app/blocks/StorageOfBlocks.cpp \
+ P:\1.From\ Git\Game\ C++\Tetris\app\game\Constants.h \
  C:/msys64/ucrt64/include/c++/13.2.0/stdexcept \
  C:/msys64/ucrt64/include/c++/13.2.0/exception \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/exception_ptr.h \
@@ -160,5 +159,4 @@ CMakeFiles/Tetris.dir/app/game/Game.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/algorithmfwd.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_heap.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_tempbuf.h \
- C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_algorithm_defs.h \
- P:/1.From\ Git/Game\ C++/Tetris/app/game\ property/constants.h
+ C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_algorithm_defs.h

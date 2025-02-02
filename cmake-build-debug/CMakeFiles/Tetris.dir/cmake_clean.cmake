@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj"
   "CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj.d"
-  "CMakeFiles/Tetris.dir/app/blocks/StorageOfBlocks.cpp.obj"
-  "CMakeFiles/Tetris.dir/app/blocks/StorageOfBlocks.cpp.obj.d"
   "CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj"
   "CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj.d"
   "CMakeFiles/Tetris.dir/app/game/Game.cpp.obj"

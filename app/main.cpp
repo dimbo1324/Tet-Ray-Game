@@ -1,82 +1,85 @@
-#include <iostream>
 #include <raylib.h>
-#include "game/Game.h"
-#include "game property/constants.h"
-#include "colors/Colors.h"
+#include "./game/Game.h"
+#include "./game/constants.h"
+#include "./colors/Colors.h"
 
+using namespace tetris;
+
+// Функция для контроля интервала между обновлениями (таймер)
 bool eventTriggered(double interval)
     {
+        static double lastUpdateTime = 0.0;
         double currentTime = GetTime();
-        if (currentTime - lastUpdateTimeValue >= interval)
+        if (currentTime - lastUpdateTime >= interval)
             {
-                lastUpdateTimeValue = currentTime;
+                lastUpdateTime = currentTime;
                 return true;
             }
         return false;
     }
 
-Game game = Game();
-
 int main()
     {
-        UpdateMusicStream(game.music);
-        InitWindow(rectangleHorizontalSideValue, rectangleVerticalSideValue, "Tetris by C++");
-        SetTargetFPS(targetFPSValue);
+        // Инициализация окна
+        InitWindow(kWindowWidth, kWindowHeight, "Tetris by C++");
+        SetTargetFPS(kTargetFPS);
 
+        // Загрузка шрифта
+        Font font = LoadFontEx(kFontFile, 64, nullptr, 0);
 
-        Font font = LoadFontEx(
-            "../../Tetris/fonts/Press_Start_2P/PressStart2P-Regular.ttf", 64,
-            nullptr,
-            0);
+        Game game;
 
         while (!WindowShouldClose())
             {
+                UpdateMusicStream(game.music);
                 game.handleInput();
 
-                if (eventTriggered(gameSpeedValue))
+                if (eventTriggered(kGameSpeedSeconds))
                     {
                         game.moveBlockDown();
                     }
 
                 BeginDrawing();
+                ClearBackground(kDarkBlue);
 
-                ClearBackground(darkBlue);
-
-                DrawTextEx(font, "Score", {xUiTextPosition, yUiTextPosition}, fontSizeUiText, 0,
-                           WHITE);
-
-                DrawTextEx(font, "Next", {xUiTextPosition + 5, yUiTextPosition + 160},
-                           fontSizeUiText, 0,
-                           WHITE);
+                // Отрисовка UI (очки, следующая фигура, сообщение GAME OVER)
+                DrawTextEx(font, "Score", {
+                               static_cast<float>(kXUiTextPosition),
+                               static_cast<float>(kYUiTextPosition)
+                           },
+                           kFontSizeUiText, 0, WHITE);
+                DrawTextEx(font, "Next", {
+                               static_cast<float>(kXUiTextPosition + 5),
+                               static_cast<float>(kYUiTextPosition + 160)
+                           },
+                           kFontSizeUiText, 0, WHITE);
 
                 if (game.gameOver)
                     {
-                        DrawTextEx(font, "GAME OVER", {xUiTextPosition - 25, yUiTextPosition + 435},
-                                   fontSizeUiText - 2, 0,
-                                   WHITE);
+                        DrawTextEx(font, "GAME OVER", {
+                                       static_cast<float>(kXUiTextPosition - 25),
+                                       static_cast<float>(kYUiTextPosition + 435)
+                                   },
+                                   kFontSizeUiText - 2, 0, WHITE);
                     }
 
-                DrawRectangleRounded({320, 55, 170, 60}, 0.3, 6, lightBlue);
-
+                DrawRectangleRounded({320, 55, 170, 60}, 0.3f, 6, kLightBlue);
 
                 char scoreText[10];
-
                 sprintf(scoreText, "%d", game.gameScore);
-
                 Vector2 scoreTextSize = MeasureTextEx(font, scoreText, 38, 2);
-
-
                 DrawTextEx(font, scoreText,
-                           {xUiTextPosition + (140 - scoreTextSize.x) / 2, 70},
-                           fontSizeUiText, 0,
-                           WHITE);
-                DrawRectangleRounded({320, 215, 170, 180}, 0.3, 6, lightBlue);
+                           {kXUiTextPosition + (140 - scoreTextSize.x) / 2, 70},
+                           kFontSizeUiText, 0, WHITE);
+
+                DrawRectangleRounded({320, 215, 170, 180}, 0.3f, 6, kLightBlue);
 
                 game.draw();
 
                 EndDrawing();
             }
 
+        UnloadFont(font);
         CloseWindow();
         return 0;
     }

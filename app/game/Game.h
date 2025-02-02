@@ -1,54 +1,62 @@
-#pragma once
+#ifndef GAME_H
+#define GAME_H
 
 #include <vector>
-#include <raylib.h>
 #include <random>
 #include "../blocks/Block.h"
 #include "../grid/Grid.h"
+#include <raylib.h>
 
-class Game
+namespace tetris
     {
-    public:
-        Game();
+        class Game
+            {
+            public:
+                Game();
 
-        ~Game();
+                ~Game();
 
-        static std::vector<Block> getAllBlocks();
+                // Отрисовка элементов игры
+                void draw();
 
-        void draw();
+                // Обработка ввода пользователя
+                void handleInput();
 
-        void handleInput();
+                // Перемещение текущего блока вниз (вызывается с определённой периодичностью)
+                void moveBlockDown();
 
-        void moveBlockDown();
+                // Состояние игры
+                bool gameOver;
+                int gameScore;
+                Music music;
 
-        bool gameOver;
+            private:
+                void moveBlockLeft();
 
-        int gameScore;
+                void moveBlockRight();
 
-        Music music;
+                void rotateBlock();
 
-    private:
-        void moveBlockLeft();
+                bool isBlockOutside() const;
 
-        void moveBlockRight();
+                bool blockFits() const;
 
-        bool isBlockOutside() const;
+                void lockBlock();
 
-        void rotateBlock();
+                void reset();
 
-        void lockBlock();
+                void updateScore(int linesCleared, int moveDownPoints);
 
-        bool blockFits() const;
+                Block getRandomBlock();
 
-        void reset();
+                std::vector<Block> getAllBlocks();
 
-        void updateScore(int linesCleared, int moveDownPoints);
+                Grid grid;
+                std::vector<Block> blocks;
+                Block currentBlock, nextBlock;
+                std::mt19937 randomEngine;
+                Sound rotateSound, clearSound;
+            };
+    } // namespace tetris
 
-        Block getRandomBlock();
-
-        Grid grid;
-        std::vector<Block> blocks;
-        Block currentBlock, nextBlock;
-        std::mt19937 randomEngine;
-        Sound rotateSound, clearSound;
-    };
+#endif // GAME_H
