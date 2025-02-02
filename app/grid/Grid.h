@@ -17,6 +17,8 @@ class Grid
 
         bool IsCellOutside(int r, int c) const;
 
+        bool IsCellEmpty(int r, int c);
+
         uint grid[20][10];
 
     private:

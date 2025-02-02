@@ -56,3 +56,9 @@ bool Grid::IsCellOutside(int r, int c) const
         if (r >= 0 && r < numRows && c >= 0 && c < numCols) return false;
         return true;
     }
+
+bool Grid::IsCellEmpty(int r, int c)
+    {
+        if (grid[r][c] == 0) return true;
+        return false;
+    }

@@ -2,6 +2,18 @@
 #include "game/Game.h"
 #include "utils/types/Types.h"
 
+double lastUpdateTime = 0;
+
+bool EventTriggered(double interval)
+    {
+        double currentTime = GetTime();
+        if (currentTime - lastUpdateTime >= interval)
+            {
+                lastUpdateTime = currentTime;
+                return true;
+            }
+        return false;
+    }
 
 int main()
     {
@@ -15,6 +27,7 @@ int main()
         while (WindowShouldClose() == false)
             {
                 game.HandleInput();
+                if (EventTriggered(0.1 )) game.MoveBlockDown();
                 BeginDrawing();
                 ClearBackground(backgroundColor);
                 game.DrawBlock();

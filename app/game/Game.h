@@ -7,7 +7,6 @@ class Game
     public:
         Game();
 
-
         Block GetRandomBlock();
 
         std::vector<Block> GetAllBlocks();
@@ -28,6 +27,10 @@ class Game
         bool IsBlockOutside();
 
         void RotateBlock();
+
+        void LockBlock();
+
+        bool BlockFits();
 
         std::vector<Block> blocks;
         Block currentBlock, nextBlock;
