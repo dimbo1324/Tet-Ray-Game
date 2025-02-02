@@ -5,9 +5,9 @@
 bool eventTriggered(double interval)
     {
         double currentTime = GetTime();
-        if (currentTime - lastUpdateTime >= interval)
+        if (currentTime - lastUpdateTimeValue >= interval)
             {
-                lastUpdateTime = currentTime;
+                lastUpdateTimeValue = currentTime;
                 return true;
             }
         return false;
@@ -15,8 +15,8 @@ bool eventTriggered(double interval)
 
 int main()
     {
-        InitWindow(rectangleSide, rectangleSide * 2, "Tetris by C++");
-        SetTargetFPS(60);
+        InitWindow(rectangleHorizontalSideValue, rectangleVerticalSideValue, "Tetris by C++");
+        SetTargetFPS(targetFPSValue);
 
         Game game;
 
@@ -24,13 +24,13 @@ int main()
             {
                 game.handleInput();
 
-                if (eventTriggered(0.003))
+                if (eventTriggered(gameSpeedValue))
                     {
                         game.moveBlockDown();
                     }
 
                 BeginDrawing();
-                ClearBackground(backgroundColor);
+                ClearBackground(backgroundColorValue);
 
                 game.draw();
 
@@ -40,4 +40,3 @@ int main()
         CloseWindow();
         return 0;
     }
-

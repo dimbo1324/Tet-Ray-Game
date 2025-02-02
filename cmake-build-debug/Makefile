@@ -224,30 +224,6 @@ app/game/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/game/Game.cpp.s
 .PHONY : app/game/Game.cpp.s
 
-app/game_property/constants.obj: app/game_property/constants.cpp.obj
-.PHONY : app/game_property/constants.obj
-
-# target to build an object file
-app/game_property/constants.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/game_property/constants.cpp.obj
-.PHONY : app/game_property/constants.cpp.obj
-
-app/game_property/constants.i: app/game_property/constants.cpp.i
-.PHONY : app/game_property/constants.i
-
-# target to preprocess a source file
-app/game_property/constants.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/game_property/constants.cpp.i
-.PHONY : app/game_property/constants.cpp.i
-
-app/game_property/constants.s: app/game_property/constants.cpp.s
-.PHONY : app/game_property/constants.s
-
-# target to generate assembly for a file
-app/game_property/constants.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/game_property/constants.cpp.s
-.PHONY : app/game_property/constants.cpp.s
-
 app/grid/Grid.obj: app/grid/Grid.cpp.obj
 .PHONY : app/grid/Grid.obj
 
@@ -341,9 +317,6 @@ help:
 	@echo ... app/game/Game.obj
 	@echo ... app/game/Game.i
 	@echo ... app/game/Game.s
-	@echo ... app/game_property/constants.obj
-	@echo ... app/game_property/constants.i
-	@echo ... app/game_property/constants.s
 	@echo ... app/grid/Grid.obj
 	@echo ... app/grid/Grid.i
 	@echo ... app/grid/Grid.s

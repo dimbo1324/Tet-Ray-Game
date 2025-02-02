@@ -1,9 +1,11 @@
 #include "Block.h"
 #include <stdexcept>
+#include "../game property/constants.h"
+
 
 Block::Block()
     : id(0),
-      cellSize(30),
+      cellSize(cellSizeValue),
       rotationState(0),
       rowOffset(0),
       colOffset(0),
@@ -16,8 +18,8 @@ void Block::draw() const
 
         for (const auto &pos: tiles)
             {
-                DrawRectangle(static_cast<int>(pos.col) * cellSize + 1,
-                              static_cast<int>(pos.row) * cellSize + 1,
+                DrawRectangle(static_cast<int>(pos.col) * cellSize + extraPixelsPositionValue,
+                              static_cast<int>(pos.row) * cellSize + extraPixelsPositionValue,
                               cellSize - 1,
                               cellSize - 1,
                               colors.at(id));

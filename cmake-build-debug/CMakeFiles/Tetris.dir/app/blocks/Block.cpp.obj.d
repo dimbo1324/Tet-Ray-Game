@@ -118,4 +118,5 @@ CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/cstdio \
  C:/msys64/ucrt64/include/c++/13.2.0/cerrno \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/charconv.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.tcc
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.tcc \
+ P:/1.From\ Git/Game\ C++/Tetris/app/game\ property/constants.h

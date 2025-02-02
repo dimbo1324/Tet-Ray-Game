@@ -2,11 +2,12 @@
 #include "../colors/Colors.h"
 #include <iostream>
 #include <algorithm>
+#include "../game property/constants.h"
 
 Grid::Grid()
-    : numRows(20),
-      numCols(10),
-      cellSize(30)
+    : numRows(numRowsValue),
+      numCols(numColsValue),
+      cellSize(cellSizeValue)
     {
         grid.resize(numRows, std::vector<int>(numCols, 0));
         initialize();
@@ -40,7 +41,8 @@ void Grid::drawGrid() const
                 for (int col = 0; col < numCols; ++col)
                     {
                         int cellValue = grid[row][col];
-                        DrawRectangle(col * cellSize + 1, row * cellSize + 1, cellSize - 1,
+                        DrawRectangle(col * cellSize + extraPixelsPositionValue,
+                                      row * cellSize + extraPixelsPositionValue, cellSize - 1,
                                       cellSize - 1, colors[cellValue]);
                     }
             }

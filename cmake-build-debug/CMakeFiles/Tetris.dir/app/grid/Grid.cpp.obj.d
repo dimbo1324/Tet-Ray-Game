@@ -153,4 +153,5 @@ CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uniform_int_dist.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_tempbuf.h \
  C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_algorithm_defs.h \
- C:/msys64/ucrt64/include/c++/13.2.0/pstl/execution_defs.h
+ C:/msys64/ucrt64/include/c++/13.2.0/pstl/execution_defs.h \
+ P:/1.From\ Git/Game\ C++/Tetris/app/game\ property/constants.h
