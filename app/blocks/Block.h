@@ -4,19 +4,18 @@
 #include <map>
 #include "../colors/Colors.h"
 #include "../positions/Position.h"
-#include "../utils/types/Types.h"
 
 
 class Block
     {
     public:
-        uint id;
+        int id;
 
         Block();
 
         void DrawBlock();
 
-        void Move(uint r, uint c);
+        void Move(int r, int c);
 
         std::vector<Position> GetCellsPositions();
 
@@ -24,9 +23,9 @@ class Block
 
         void UndoRotation();
 
-        std::map<uint, std::vector<Position> > cells;
+        std::map<int, std::vector<Position> > cells;
 
     private:
-        uint cellSize, rotationState, rowOffset, colOffset;
+        int cellSize, rotationState, rowOffset, colOffset;
         std::vector<Color> colors;
     };

@@ -14,3 +14,16 @@
 4396	5739	7602062525465784	CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/Z_Block.cpp.obj	57ef33b728ae4edc
 4435	8128	7602062525826189	CMakeFiles/Tetris.dir/app/game/Game.cpp.obj	464868f57df53853
 8128	8673	7602062562760634	Tetris.exe	24c7461db29de06c
+25	181	7602066313420632	CMakeFiles/Tetris.dir/app/positions/Position.cpp.obj	ceac13b67eea7624
+7	547	7602066313229516	CMakeFiles/Tetris.dir/app/main.cpp.obj	f0dd21caaab98a07
+86	557	7602066314030319	CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/J_Block.cpp.obj	9a5c3efd9b890703
+66	567	7602066313821558	CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/L_Block.cpp.obj	558ae27be3888a28
+182	671	7602066314985130	CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/I_Block.cpp.obj	e88b5bdbbecd5261
+16	821	7602066313324152	CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj	d9a12353d37d048a
+48	936	7602066313646691	CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj	fd8e53b89d97aca5
+547	980	7602066318634308	CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/O_Block.cpp.obj	e7d592e7bedd693b
+557	995	7602066318742241	CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/S_Block.cpp.obj	102acd4bb508bb7f
+567	1005	7602066318838463	CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/T_Block.cpp.obj	dc192f2695207e7e
+671	1091	7602066319881682	CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/Z_Block.cpp.obj	57ef33b728ae4edc
+821	1967	7602066321377977	CMakeFiles/Tetris.dir/app/game/Game.cpp.obj	464868f57df53853
+1967	2276	7602066332839921	Tetris.exe	24c7461db29de06c

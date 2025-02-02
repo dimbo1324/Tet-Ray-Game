@@ -1,6 +1,5 @@
 #include <random>
 #include "Game.h"
-#include "../utils/types/Types.h"
 #include "../blocks/TypesOfBlocks/cpp/L_Block.cpp"
 #include "../blocks/TypesOfBlocks/cpp/J_Block.cpp"
 #include "../blocks/TypesOfBlocks/cpp/I_Block.cpp"
@@ -24,7 +23,7 @@ Block Game::GetRandomBlock()
             {
                 blocks = GetAllBlocks();
             }
-        uint randomValue = rand() % blocks.size();
+        int randomValue = rand() % blocks.size();
         Block block = blocks[randomValue];
         blocks.erase(blocks.begin() + randomValue);
         return block;

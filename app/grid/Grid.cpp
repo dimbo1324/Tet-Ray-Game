@@ -1,7 +1,6 @@
 #include <iostream>
 #include "Grid.h"
 #include "../colors/Colors.h"
-#include "../utils/types/Types.h"
 
 Grid::Grid()
     {
@@ -14,9 +13,9 @@ Grid::Grid()
 
 void Grid::Initialize()
     {
-        for (uint r = 0; r < numRows; r++)
+        for (int r = 0; r < numRows; r++)
             {
-                for (uint c = 0; c < numCols; c++)
+                for (int c = 0; c < numCols; c++)
                     {
                         grid[r][c] = 0;
                     }
@@ -25,9 +24,9 @@ void Grid::Initialize()
 
 void Grid::PrintGrid()
     {
-        for (uint r = 0; r < numRows; r++)
+        for (int r = 0; r < numRows; r++)
             {
-                for (uint c = 0; c < numCols; c++)
+                for (int c = 0; c < numCols; c++)
                     {
                         std::cout << grid[r][c] << " ";
                     }
@@ -38,11 +37,11 @@ void Grid::PrintGrid()
 
 void Grid::DrawGrid()
     {
-        for (uint r = 0; r < numRows; r++)
+        for (int r = 0; r < numRows; r++)
             {
-                for (uint c = 0; c < numCols; c++)
+                for (int c = 0; c < numCols; c++)
                     {
-                        uint cellValue = grid[r][c];
+                        int cellValue = grid[r][c];
                         DrawRectangle(c * cellSize + 1, r * cellSize + 1, cellSize - 1,
                                       cellSize - 1,
                                       colors[cellValue]);
@@ -66,7 +65,7 @@ bool Grid::IsCellEmpty(int r, int c)
 int Grid::ClearFullRows()
     {
         int completed = 0;
-        for (uint r = numRows-1; r >= 0; r--)
+        for (int r = numRows-1; r >= 0; r--)
             {
                 if (IsRowFull(r))
                     {
@@ -80,7 +79,7 @@ int Grid::ClearFullRows()
         return completed;
     }
 
-bool Grid::IsRowFull(uint r)
+bool Grid::IsRowFull(int r)
     {
         for (int c = 0; c < numCols; c++)
             {
@@ -89,7 +88,7 @@ bool Grid::IsRowFull(uint r)
         return true;
     }
 
-void Grid::ClearRow(uint r)
+void Grid::ClearRow(int r)
     {
         for (int c = 0; c < numCols; c++)
             {
@@ -97,7 +96,7 @@ void Grid::ClearRow(uint r)
             }
     }
 
-void Grid::MoveRowDown(uint r, int numRows)
+void Grid::MoveRowDown(int r, int numRows)
     {
         for (int c = 0; c < numCols; c++)
             {

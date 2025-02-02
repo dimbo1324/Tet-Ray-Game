@@ -1,5 +1,4 @@
 #include "Block.h"
-#include "../utils/types/Types.h"
 
 Block::Block() : id(0)
     {
@@ -23,7 +22,7 @@ void Block::DrawBlock()
             }
     }
 
-void Block::Move(uint r, uint c)
+void Block::Move(int r, int c)
     {
         rowOffset += r;
         colOffset += c;

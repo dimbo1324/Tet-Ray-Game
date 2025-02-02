@@ -1,7 +1,6 @@
 #pragma once
 #include <vector>
 #include <raylib.h>
-#include "../utils/types/Types.h"
 
 
 class Grid
@@ -20,15 +19,15 @@ class Grid
         bool IsCellEmpty(int r, int c);
         int ClearFullRows();
 
-        uint grid[20][10];
+        int grid[20][10];
 
     private:
-        bool IsRowFull(uint r);
+        bool IsRowFull(int r);
 
-        void ClearRow(uint r);
+        void ClearRow(int r);
 
-        void MoveRowDown(uint r, int numRows);
+        void MoveRowDown(int r, int numRows);
 
-        uint numRows, numCols, cellSize;
+        int numRows, numCols, cellSize;
         std::vector<Color> colors;
     };
