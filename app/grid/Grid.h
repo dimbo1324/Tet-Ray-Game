@@ -1,7 +1,6 @@
 #pragma once
 #include <vector>
 #include <raylib.h>
-#include "../utils/types/Types.h"
 
 class Grid
 {
