@@ -147,4 +147,5 @@ CMakeFiles/Tetris.dir/app/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/erase_if.h \
  P:/1.From\ Git/Game\ C++/Tetris/app/colors/Colors.h \
  P:/1.From\ Git/Game\ C++/Tetris/app/positions/Position.h \
- P:/1.From\ Git/Game\ C++/Tetris/app/grid/Grid.h
+ P:/1.From\ Git/Game\ C++/Tetris/app/grid/Grid.h \
+ P:\1.From\ Git\Game\ C++\Tetris\app\game\ property/constants.h

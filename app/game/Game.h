@@ -36,6 +36,8 @@ class Game
 
         bool blockFits() const;
 
+        void Reset();
+
         Grid grid;
         std::vector<Block> blocks;
         Block currentBlock, nextBlock;

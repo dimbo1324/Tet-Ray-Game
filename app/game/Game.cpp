@@ -39,7 +39,14 @@ void Game::draw()
 
 void Game::handleInput()
     {
-        switch (GetKeyPressed())
+        int key = GetKeyPressed();
+        if (gameOver && (key == KEY_SPACE || key == KEY_ENTER))
+            {
+                gameOver = false;
+                Reset();
+            }
+
+        switch (key)
             {
                 case KEY_LEFT:
                     moveBlockLeft();
@@ -143,4 +150,12 @@ bool Game::blockFits() const
                                {
                                    return grid.isCellEmpty(pos.row, pos.col);
                                });
+    }
+
+void Game::Reset()
+    {
+        grid.initialize();
+        blocks = getAllBlocks();
+        currentBlock = getRandomBlock();
+        nextBlock = getRandomBlock();
     }

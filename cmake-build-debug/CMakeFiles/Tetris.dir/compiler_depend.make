@@ -434,6 +434,18 @@ CMakeFiles/Tetris.dir/app/game/Game.cpp.obj: P:/1.From\ Git/Game\ C++/Tetris/app
   P:/1.From\ Git/_LIBS/raylib-master/build/raylib/include/raylib.h \
   P:/1.From\ Git/Game\ C++/Tetris/app/game/Game.h
 
+CMakeFiles/Tetris.dir/app/game_property/constants.cpp.obj: P:/1.From\ Git/Game\ C++/Tetris/app/game\ property/constants.cpp \
+  C:/msys64/ucrt64/include/_mingw.h \
+  C:/msys64/ucrt64/include/_mingw_mac.h \
+  C:/msys64/ucrt64/include/_mingw_secapi.h \
+  C:/msys64/ucrt64/include/_mingw_stdarg.h \
+  C:/msys64/ucrt64/include/sdks/_mingw_ddk.h \
+  C:/msys64/ucrt64/include/stdarg.h \
+  C:/msys64/ucrt64/include/vadefs.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
+  P:/1.From\ Git/_LIBS/raylib-master/build/raylib/include/raylib.h \
+  P:/1.From\ Git/Game\ C++/Tetris/app/game\ property/constants.h
+
 CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj: P:/1.From\ Git/Game\ C++/Tetris/app/grid/Grid.cpp \
   C:/msys64/ucrt64/include/_mingw.h \
   C:/msys64/ucrt64/include/_mingw_mac.h \
@@ -748,6 +760,7 @@ CMakeFiles/Tetris.dir/app/main.cpp.obj: P:/1.From\ Git/Game\ C++/Tetris/app/main
   P:/1.From\ Git/Game\ C++/Tetris/app/grid/Grid.h \
   P:/1.From\ Git/Game\ C++/Tetris/app/positions/Position.h \
   P:/1.From\ Git/_LIBS/raylib-master/build/raylib/include/raylib.h \
+  P:/1.From\ Git/Game\ C++/Tetris/app/game\ property/constants.h \
   P:/1.From\ Git/Game\ C++/Tetris/app/game/Game.h
 
 CMakeFiles/Tetris.dir/app/positions/Position.cpp.obj: P:/1.From\ Git/Game\ C++/Tetris/app/positions/Position.cpp \
@@ -1109,6 +1122,10 @@ P:/1.From\ Git/Game\ C++/Tetris/app/grid/Grid.h:
 C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_inline.h:
 
 P:/1.From\ Git/Game\ C++/Tetris/app/game/Game.h:
+
+P:/1.From\ Git/Game\ C++/Tetris/app/game\ property/constants.cpp:
+
+P:/1.From\ Git/Game\ C++/Tetris/app/game\ property/constants.h:
 
 P:/1.From\ Git/Game\ C++/Tetris/app/grid/Grid.cpp:
 

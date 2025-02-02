@@ -23,6 +23,7 @@ add_executable(Tetris app/main.cpp
         app/game/Game.cpp
         app/game/Game.h
         app/blocks/StorageOfBlocks.cpp
+        "app/game property/constants.cpp"
 
 )
 

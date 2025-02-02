@@ -1,7 +1,6 @@
 #include <raylib.h>
 #include "game/Game.h"
-
-double lastUpdateTime = 0.0;
+#include "game property/constants.h"
 
 bool eventTriggered(double interval)
     {
@@ -16,9 +15,6 @@ bool eventTriggered(double interval)
 
 int main()
     {
-        const Color backgroundColor = {10, 120, 156, 124};
-        const int rectangleSide = 300;
-
         InitWindow(rectangleSide, rectangleSide * 2, "Tetris by C++");
         SetTargetFPS(60);
 
@@ -44,3 +40,4 @@ int main()
         CloseWindow();
         return 0;
     }
+
