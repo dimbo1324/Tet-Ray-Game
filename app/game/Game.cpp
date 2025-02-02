@@ -10,6 +10,7 @@ Game::Game()
         blocks = getAllBlocks();
         currentBlock = getRandomBlock();
         nextBlock = getRandomBlock();
+        gameOver = false;
     }
 
 Block Game::getRandomBlock()
@@ -59,31 +60,41 @@ void Game::handleInput()
 
 void Game::moveBlockLeft()
     {
-        currentBlock.move(0, -1);
-        if (isBlockOutside() || !blockFits())
+        if (!gameOver)
             {
-                currentBlock.move(0, 1);
+                currentBlock.move(0, -1);
+                if (isBlockOutside() || !blockFits())
+                    {
+                        currentBlock.move(0, 1);
+                    }
             }
     }
 
 void Game::moveBlockRight()
     {
-        currentBlock.move(0, 1);
-        if (isBlockOutside() || !blockFits())
+        if (!gameOver)
             {
-                currentBlock.move(0, -1);
+                currentBlock.move(0, 1);
+                if (isBlockOutside() || !blockFits())
+                    {
+                        currentBlock.move(0, -1);
+                    }
             }
     }
 
 void Game::moveBlockDown()
     {
-        currentBlock.move(1, 0);
-        if (isBlockOutside() || !blockFits())
+        if (!gameOver)
             {
-                currentBlock.move(-1, 0);
-                lockBlock();
+                currentBlock.move(1, 0);
+                if (isBlockOutside() || !blockFits())
+                    {
+                        currentBlock.move(-1, 0);
+                        lockBlock();
+                    }
             }
     }
+
 
 bool Game::isBlockOutside() const
     {
@@ -97,10 +108,13 @@ bool Game::isBlockOutside() const
 
 void Game::rotateBlock()
     {
-        currentBlock.rotate();
-        if (isBlockOutside() || !blockFits())
+        if (!gameOver)
             {
-                currentBlock.undoRotation();
+                currentBlock.rotate();
+                if (isBlockOutside() || !blockFits())
+                    {
+                        currentBlock.undoRotation();
+                    }
             }
     }
 
@@ -112,6 +126,10 @@ void Game::lockBlock()
                 grid.setCell(pos.row, pos.col, currentBlock.id);
             }
         currentBlock = nextBlock;
+        if (blockFits() == false)
+            {
+                gameOver = true;
+            }
         nextBlock = getRandomBlock();
         grid.clearFullRows();
     }

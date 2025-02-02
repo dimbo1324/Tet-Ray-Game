@@ -46,7 +46,8 @@ class L_Block : public Block
                             {2, {Position(1, 0), Position(1, 1), Position(1, 2), Position(2, 0)}},
                             {3, {Position(0, 0), Position(0, 1), Position(1, 1), Position(2, 1)}}
                         };
-                }
+                move(0, 3);
+            }
     };
 
 class O_Block : public Block
