@@ -18,10 +18,17 @@ class Grid
         bool IsCellOutside(int r, int c) const;
 
         bool IsCellEmpty(int r, int c);
+        int ClearFullRows();
 
         uint grid[20][10];
 
     private:
+        bool IsRowFull(uint r);
+
+        void ClearRow(uint r);
+
+        void MoveRowDown(uint r, int numRows);
+
         uint numRows, numCols, cellSize;
         std::vector<Color> colors;
     };
