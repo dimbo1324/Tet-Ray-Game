@@ -1,31 +1,38 @@
 #pragma once
 
-#include  <vector>
+#include <vector>
 #include <map>
 #include "../colors/Colors.h"
 #include "../positions/Position.h"
 
+std::vector<Color> GetCellColors();
+
+void DrawRectangle(int posX, int posY, int width, int height, Color color);
 
 class Block
     {
     public:
-        int id;
-
         Block();
 
-        void DrawBlock();
+        void draw() const;
 
-        void Move(int r, int c);
+        void move(int rowDelta, int colDelta);
 
-        std::vector<Position> GetCellsPositions();
+        std::vector<Position> getCellsPositions() const;
 
-        void Rotate();
+        void rotate();
 
-        void UndoRotation();
+        void undoRotation();
+
+        int id;
 
         std::map<int, std::vector<Position> > cells;
 
     private:
-        int cellSize, rotationState, rowOffset, colOffset;
+        int cellSize;
+        int rotationState;
+        int rowOffset;
+        int colOffset;
+
         std::vector<Color> colors;
     };

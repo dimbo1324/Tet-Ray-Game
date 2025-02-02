@@ -1,33 +1,38 @@
 #pragma once
+
 #include <vector>
 #include <raylib.h>
-
 
 class Grid
     {
     public:
         Grid();
 
-        void Initialize();
+        void initialize();
 
-        void PrintGrid();
+        void printGrid() const;
 
-        void DrawGrid();
+        void drawGrid() const;
 
-        bool IsCellOutside(int r, int c) const;
+        bool isCellOutside(int row, int col) const;
 
-        bool IsCellEmpty(int r, int c);
-        int ClearFullRows();
+        bool isCellEmpty(int row, int col) const;
 
-        int grid[20][10];
+        int clearFullRows();
+
+        void setCell(int row, int col, int value); // Добавленный метод
 
     private:
-        bool IsRowFull(int r);
+        bool isRowFull(int row) const;
 
-        void ClearRow(int r);
+        void clearRow(int row);
 
-        void MoveRowDown(int r, int numRows);
+        void moveRowDown(int row, int numRowsToMove);
 
-        int numRows, numCols, cellSize;
+        int numRows;
+        int numCols;
+        int cellSize;
+
+        std::vector<std::vector<int> > grid;
         std::vector<Color> colors;
     };

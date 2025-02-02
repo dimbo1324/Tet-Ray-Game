@@ -1,9 +1,9 @@
 #include <raylib.h>
 #include "game/Game.h"
 
-double lastUpdateTime = 0;
+double lastUpdateTime = 0.0;
 
-bool EventTriggered(double interval)
+bool eventTriggered(double interval)
     {
         double currentTime = GetTime();
         if (currentTime - lastUpdateTime >= interval)
@@ -16,21 +16,31 @@ bool EventTriggered(double interval)
 
 int main()
     {
-        Color backgroundColor = {10, 120, 156, 124};
-        int rectangleSide = 300;
+        const Color backgroundColor = {10, 120, 156, 124};
+        const int rectangleSide = 300;
+
         InitWindow(rectangleSide, rectangleSide * 2, "Tetris by C++");
         SetTargetFPS(60);
 
-        Game game = Game();
+        Game game;
 
-        while (WindowShouldClose() == false)
+        while (!WindowShouldClose())
             {
-                game.HandleInput();
-                if (EventTriggered(0.3 )) game.MoveBlockDown();
+                game.handleInput();
+
+                if (eventTriggered(0.3))
+                    {
+                        game.moveBlockDown();
+                    }
+
                 BeginDrawing();
                 ClearBackground(backgroundColor);
-                game.DrawBlock();
+
+                game.draw();
+
                 EndDrawing();
             }
+
         CloseWindow();
+        return 0;
     }

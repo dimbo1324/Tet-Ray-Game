@@ -1,106 +1,116 @@
-#include <iostream>
 #include "Grid.h"
 #include "../colors/Colors.h"
+#include <iostream>
+#include <algorithm>
 
 Grid::Grid()
+    : numRows(20),
+      numCols(10),
+      cellSize(30)
     {
-        numRows = 20;
-        numCols = 10;
-        cellSize = 30;
-        Initialize();
+        grid.resize(numRows, std::vector<int>(numCols, 0));
+        initialize();
         colors = GetCellColors();
     }
 
-void Grid::Initialize()
+void Grid::initialize()
     {
-        for (int r = 0; r < numRows; r++)
+        for (auto &row: grid)
             {
-                for (int c = 0; c < numCols; c++)
-                    {
-                        grid[r][c] = 0;
-                    }
+                std::fill(row.begin(), row.end(), 0);
             }
     }
 
-void Grid::PrintGrid()
+void Grid::printGrid() const
     {
-        for (int r = 0; r < numRows; r++)
+        for (const auto &row: grid)
             {
-                for (int c = 0; c < numCols; c++)
+                for (const auto cell: row)
                     {
-                        std::cout << grid[r][c] << " ";
+                        std::cout << cell << " ";
                     }
                 std::cout << std::endl;
             }
     }
 
-
-void Grid::DrawGrid()
+void Grid::drawGrid() const
     {
-        for (int r = 0; r < numRows; r++)
+        for (int row = 0; row < numRows; ++row)
             {
-                for (int c = 0; c < numCols; c++)
+                for (int col = 0; col < numCols; ++col)
                     {
-                        int cellValue = grid[r][c];
-                        DrawRectangle(c * cellSize + 1, r * cellSize + 1, cellSize - 1,
-                                      cellSize - 1,
-                                      colors[cellValue]);
+                        int cellValue = grid[row][col];
+                        DrawRectangle(col * cellSize + 1, row * cellSize + 1, cellSize - 1,
+                                      cellSize - 1, colors[cellValue]);
                     }
             }
     }
 
-
-bool Grid::IsCellOutside(int r, int c) const
+bool Grid::isCellOutside(int row, int col) const
     {
-        if (r >= 0 && r < numRows && c >= 0 && c < numCols) return false;
-        return true;
+        return (row < 0 || row >= numRows || col < 0 || col >= numCols);
     }
 
-bool Grid::IsCellEmpty(int r, int c)
+bool Grid::isCellEmpty(int row, int col) const
     {
-        if (grid[r][c] == 0) return true;
-        return false;
-    }
-
-int Grid::ClearFullRows()
-    {
-        int completed = 0;
-        for (int r = numRows-1; r >= 0; r--)
+        if (isCellOutside(row, col))
             {
-                if (IsRowFull(r))
+                return false;
+            }
+        return (grid[row][col] == 0);
+    }
+
+int Grid::clearFullRows()
+    {
+        int clearedRows = 0;
+        for (int row = numRows - 1; row >= 0; --row)
+            {
+                if (isRowFull(row))
                     {
-                        ClearRow(r);
-                        completed++;
-                    } else if (completed > 0)
+                        clearRow(row);
+                        ++clearedRows;
+                    } else if (clearedRows > 0)
                     {
-                        MoveRowDown(r, completed);
+                        moveRowDown(row, clearedRows);
                     }
             }
-        return completed;
+        return clearedRows;
     }
 
-bool Grid::IsRowFull(int r)
+bool Grid::isRowFull(int row) const
     {
-        for (int c = 0; c < numCols; c++)
+        for (int col = 0; col < numCols; ++col)
             {
-                if (grid[r][c] == 0) return false;
+                if (grid[row][col] == 0)
+                    {
+                        return false;
+                    }
             }
         return true;
     }
 
-void Grid::ClearRow(int r)
+void Grid::clearRow(int row)
     {
-        for (int c = 0; c < numCols; c++)
+        for (int col = 0; col < numCols; ++col)
             {
-                grid[r][c] = 0;
+                grid[row][col] = 0;
             }
     }
 
-void Grid::MoveRowDown(int r, int numRows)
+void Grid::moveRowDown(int row, int numRowsToMove)
     {
-        for (int c = 0; c < numCols; c++)
+        int targetRow = row + numRowsToMove;
+        if (targetRow < numRows)
             {
-                grid[r + numRows][c] = grid[r][c];
-                grid[r][c] = 0;
+                grid[targetRow] = grid[row];
+                clearRow(row);
+            }
+    }
+
+void Grid::setCell(int row, int col, int value)
+    {
+        if (!isCellOutside(row, col))
+            {
+                grid[row][col] = value;
             }
     }

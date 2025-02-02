@@ -1,56 +1,75 @@
 #include "Block.h"
+#include <stdexcept>
 
-Block::Block() : id(0)
-    {
-        cellSize = 30;
-        rotationState = 0;
-        rowOffset = 0;
-        colOffset = 0;
-        colors = GetCellColors();
-    }
+Block::Block()
+    : id(0),
+      cellSize(30),
+      rotationState(0),
+      rowOffset(0),
+      colOffset(0),
+      colors(GetCellColors())
+    {}
 
-void Block::DrawBlock()
+void Block::draw() const
     {
-        std::vector<Position> tiles = GetCellsPositions();
-        for (Position i: tiles)
+        std::vector<Position> tiles = getCellsPositions();
+
+        for (const auto &pos: tiles)
             {
-                DrawRectangle(static_cast<int>(i.col) * static_cast<int>(cellSize) + 1,
-                              static_cast<int>(i.row) * static_cast<int>(cellSize) + 1,
-                              static_cast<int>(cellSize) - 1,
-                              static_cast<int>(cellSize) - 1,
-                              colors[id]);
+                DrawRectangle(static_cast<int>(pos.col) * cellSize + 1,
+                              static_cast<int>(pos.row) * cellSize + 1,
+                              cellSize - 1,
+                              cellSize - 1,
+                              colors.at(id));
             }
     }
 
-void Block::Move(int r, int c)
+void Block::move(int rowDelta, int colDelta)
     {
-        rowOffset += r;
-        colOffset += c;
+        rowOffset += rowDelta;
+        colOffset += colDelta;
     }
 
-std::vector<Position> Block::GetCellsPositions()
+std::vector<Position> Block::getCellsPositions() const
     {
-        std::vector<Position> tiles = cells[rotationState];
+        auto it = cells.find(rotationState);
+        if (it == cells.end())
+            {
+                throw std::out_of_range("Invalid rotation state in Block::getCellsPositions()");
+            }
+
+        const std::vector<Position> &baseTiles = it->second;
         std::vector<Position> movedTiles;
-        for (Position i: tiles)
+        movedTiles.reserve(baseTiles.size());
+
+        for (const auto &pos: baseTiles)
             {
-                Position newPosition = Position(i.row + rowOffset, i.col + colOffset);
-                movedTiles.push_back(newPosition);
+                movedTiles.emplace_back(pos.row + rowOffset, pos.col + colOffset);
             }
+
         return movedTiles;
     }
 
-void Block::Rotate()
+void Block::rotate()
     {
-        rotationState++;
-        if (rotationState == (int) cells.size()) rotationState = 0;
+        if (cells.empty())
+            {
+                throw std::runtime_error("Block cells are empty");
+            }
+        rotationState = (rotationState + 1) % cells.size();
     }
 
-void Block::UndoRotation()
+void Block::undoRotation()
     {
-        rotationState--;
-        if (rotationState == -1)
+        if (cells.empty())
+            {
+                throw std::runtime_error("Block cells are empty");
+            }
+        if (rotationState == 0)
             {
                 rotationState = cells.size() - 1;
+            } else
+            {
+                --rotationState;
             }
     }

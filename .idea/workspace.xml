@@ -27,16 +27,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc0c7ddb-0572-4b25-b0fe-d530ff4afb3f" name="Changes" comment="Удаление беззнакового типа">
+      <change afterPath="$PROJECT_DIR$/app/blocks/StorageOfBlocks.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blocks/Block.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/blocks/Block.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blocks/Block.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/blocks/Block.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blocks/TypesOfBlocks/cpp/I_Block.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blocks/TypesOfBlocks/cpp/J_Block.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blocks/TypesOfBlocks/cpp/L_Block.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blocks/TypesOfBlocks/cpp/O_Block.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blocks/TypesOfBlocks/cpp/S_Block.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blocks/TypesOfBlocks/cpp/T_Block.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blocks/TypesOfBlocks/cpp/Z_Block.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/colors/Colors.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/colors/Colors.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/colors/Colors.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/colors/Colors.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/game/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/game/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/game/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/game/Game.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/grid/Grid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/grid/Grid.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/grid/Grid.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/grid/Grid.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/positions/Position.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/positions/Position.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/positions/Position.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/positions/Position.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/types/Types.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-5eb5bb068e76b3469cc0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-aa578ae3c884cc660dc3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-e96856fa94a0adf0c890.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-02-02T13-30-42-0023.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Tetris-Debug-a4040deb671695b9c0bb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/positions/Position.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tetris.dir/app/positions/Position.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +86,9 @@
     "accountId": "f841a3de-fe97-469c-96db-22497613d263"
   }
 }]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://P:/1.From Git/Game C++/Tetris/app/blocks/Block.cpp" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -76,6 +106,7 @@
     "cidr.known.project.marker": "true",
     "com.codeium.enabled": "true",
     "git-widget-placeholder": "refactor-dev",
+    "last_opened_file_path": "P:/1.From Git/Game C++/Tetris/app/blocks",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +115,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="P:\1.From Git\Game C++\Tetris\app\blocks" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="P:\1.From Git\Game C++\Tetris\app\blocks\TypesOfBlocks\cpp" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -104,7 +143,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738503025017</updated>
-      <workItem from="1738503026761" duration="394000" />
+      <workItem from="1738503026761" duration="2265000" />
     </task>
     <task id="LOCAL-00001" summary="Удаление беззнакового типа">
       <option name="closed" value="true" />
@@ -114,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738503145113</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Удаление беззнакового типа">
+      <option name="closed" value="true" />
+      <created>1738503544645</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738503544645</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

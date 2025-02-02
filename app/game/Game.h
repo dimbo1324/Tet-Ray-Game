@@ -1,4 +1,8 @@
 #pragma once
+
+#include <vector>
+#include <raylib.h>
+#include <random>
 #include "../blocks/Block.h"
 #include "../grid/Grid.h"
 
@@ -7,31 +11,40 @@ class Game
     public:
         Game();
 
-        Block GetRandomBlock();
+        // Метод, возвращающий случайный блок.
+        Block getRandomBlock();
 
-        std::vector<Block> GetAllBlocks();
+        // Метод возвращает все типы блоков. Объявлен как static, так как не зависит от состояния объекта.
+        static std::vector<Block> getAllBlocks();
 
-        void DrawBlock();
+        // Отрисовка игры.
+        void draw();
 
-        void HandleInput();
+        // Обработка ввода пользователя.
+        void handleInput();
 
-        void MoveBlockLeft();
+        // Перемещение блоков.
+        void moveBlockLeft();
 
-        void MoveBlockRight();
+        void moveBlockRight();
 
-        void MoveBlockDown();
-
-        Grid grid;
+        void moveBlockDown();
 
     private:
-        bool IsBlockOutside();
+        // Проверяет, выходит ли текущий блок за пределы игрового поля.
+        bool isBlockOutside() const;
 
-        void RotateBlock();
+        // Поворачивает текущий блок.
+        void rotateBlock();
 
-        void LockBlock();
+        // "Закрепляет" блок на сетке и обновляет игровое состояние.
+        void lockBlock();
 
-        bool BlockFits();
+        // Проверяет, свободны ли ячейки под текущим блоком.
+        bool blockFits() const;
 
+        Grid grid;
         std::vector<Block> blocks;
         Block currentBlock, nextBlock;
+        std::mt19937 randomEngine;
     };
