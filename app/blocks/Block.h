@@ -1,32 +1,30 @@
 #pragma once
 
-#include  <vector>
+#include <vector>
 #include <map>
 #include "../colors/Colors.h"
 #include "../positions/Position.h"
-#include "../utils/types/Types.h"
-
 
 class Block
-    {
-    public:
-        uint id;
+{
+public:
+    int id;
 
-        Block();
+    Block();
 
-        void DrawBlock();
+    void DrawBlock();
 
-        void Move(uint r, uint c);
+    void Move(int r, int c);
 
-        std::vector<Position> GetCellsPositions();
+    std::vector<Position> GetCellsPositions();
 
-        void Rotate();
+    void Rotate();
 
-        void UndoRotation();
+    void UndoRotation();
 
-        std::map<uint, std::vector<Position> > cells;
+    std::map<int, std::vector<Position>> cells;
 
-    private:
-        uint cellSize, rotationState, rowOffset, colOffset;
-        std::vector<Color> colors;
-    };
+private:
+    int cellSize, rotationState, rowOffset, colOffset;
+    std::vector<Color> colors;
+};
