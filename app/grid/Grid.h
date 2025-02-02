@@ -15,6 +15,7 @@ class Grid
 
         void DrawGrid();
 
+        bool IsCellOutside(int r, int c) const;
 
         uint grid[20][10];
 

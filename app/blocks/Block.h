@@ -20,6 +20,10 @@ class Block
 
         std::vector<Position> GetCellsPositions();
 
+        void Rotate();
+
+        void UndoRotation();
+
         std::map<uint, std::vector<Position> > cells;
 
     private:

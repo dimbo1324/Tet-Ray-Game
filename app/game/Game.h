@@ -25,6 +25,10 @@ class Game
         Grid grid;
 
     private:
+        bool IsBlockOutside();
+
+        void RotateBlock();
+
         std::vector<Block> blocks;
         Block currentBlock, nextBlock;
     };
