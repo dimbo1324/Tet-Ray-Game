@@ -1,32 +1,34 @@
 #pragma once
 #include <vector>
 #include <raylib.h>
+#include "../utils/types/Types.h"
+
 
 class Grid
-{
-public:
-    Grid();
+    {
+    public:
+        Grid();
 
-    void Initialize();
+        void Initialize();
 
-    void PrintGrid();
+        void PrintGrid();
 
-    void DrawGrid();
+        void DrawGrid();
 
-    bool IsCellOutside(int r, int c) const;
+        bool IsCellOutside(int r, int c) const;
 
-    bool IsCellEmpty(int r, int c);
-    int ClearFullRows();
+        bool IsCellEmpty(int r, int c);
+        int ClearFullRows();
 
-    int grid[20][10];
+        uint grid[20][10];
 
-private:
-    bool IsRowFull(int r);
+    private:
+        bool IsRowFull(uint r);
 
-    void ClearRow(int r);
+        void ClearRow(uint r);
 
-    void MoveRowDown(int r, int numRows);
+        void MoveRowDown(uint r, int numRows);
 
-    int numRows, numCols, cellSize;
-    std::vector<Color> colors;
-};
+        uint numRows, numCols, cellSize;
+        std::vector<Color> colors;
+    };

@@ -1,10 +1,11 @@
 #pragma once
+#include "../utils/types/Types.h"
 
 class Position
-{
-public:
-    Position(int row, int col);
+    {
+    public:
+        Position(uint row, uint col);
 
-    int row;
-    int col;
-};
+        uint row;
+        uint col;
+    };

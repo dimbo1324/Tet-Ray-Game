@@ -49,11 +49,120 @@ cmake_ninja_workdir = P$:/1.From$ Git/Game$ C++/Tetris/cmake-build-debug/
 
 build cmake_object_order_depends_target_Tetris: phony || .
 
-build CMakeFiles/Tetris.dir/main.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/main.cpp || cmake_object_order_depends_target_Tetris
-  DEP_FILE = CMakeFiles\Tetris.dir\main.cpp.obj.d
+build CMakeFiles/Tetris.dir/app/main.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/main.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
   OBJECT_DIR = CMakeFiles\Tetris.dir
-  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/grid/Grid.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\grid\Grid.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\grid
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/positions/Position.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/positions/Position.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\positions\Position.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\positions
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/colors/Colors.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\colors\Colors.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\colors
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/blocks/Block.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\blocks\Block.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\blocks
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/L_Block.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/blocks/TypesOfBlocks/cpp/L_Block.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp\L_Block.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/J_Block.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/blocks/TypesOfBlocks/cpp/J_Block.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp\J_Block.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/I_Block.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/blocks/TypesOfBlocks/cpp/I_Block.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp\I_Block.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/O_Block.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/blocks/TypesOfBlocks/cpp/O_Block.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp\O_Block.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/S_Block.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/blocks/TypesOfBlocks/cpp/S_Block.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp\S_Block.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/T_Block.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/blocks/TypesOfBlocks/cpp/T_Block.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp\T_Block.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/Z_Block.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/blocks/TypesOfBlocks/cpp/Z_Block.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp\Z_Block.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\blocks\TypesOfBlocks\cpp
+  TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
+  TARGET_PDB = Tetris.pdb
+
+build CMakeFiles/Tetris.dir/app/game/Game.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P$:/1.From$ Git/Game$ C++/Tetris/app/game/Game.cpp || cmake_object_order_depends_target_Tetris
+  DEP_FILE = CMakeFiles\Tetris.dir\app\game\Game.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"P:/1.From Git/_LIBS/raylib-master/build/raylib/include"
+  OBJECT_DIR = CMakeFiles\Tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\Tetris.dir\app\game
   TARGET_COMPILE_PDB = CMakeFiles\Tetris.dir\
   TARGET_PDB = Tetris.pdb
 
@@ -65,9 +174,10 @@ build CMakeFiles/Tetris.dir/main.cpp.obj: CXX_COMPILER__Tetris_unscanned_Debug P
 #############################################
 # Link the executable Tetris.exe
 
-build Tetris.exe: CXX_EXECUTABLE_LINKER__Tetris_Debug CMakeFiles/Tetris.dir/main.cpp.obj
+build Tetris.exe: CXX_EXECUTABLE_LINKER__Tetris_Debug CMakeFiles/Tetris.dir/app/main.cpp.obj CMakeFiles/Tetris.dir/app/grid/Grid.cpp.obj CMakeFiles/Tetris.dir/app/positions/Position.cpp.obj CMakeFiles/Tetris.dir/app/colors/Colors.cpp.obj CMakeFiles/Tetris.dir/app/blocks/Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/L_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/J_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/I_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/O_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/S_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/T_Block.cpp.obj CMakeFiles/Tetris.dir/app/blocks/TypesOfBlocks/cpp/Z_Block.cpp.obj CMakeFiles/Tetris.dir/app/game/Game.cpp.obj | P$:/1.From$ Git/_LIBS/raylib-master/build/raylib/libraylib.a
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = "P:/1.From Git/_LIBS/raylib-master/build/raylib/libraylib.a"  -lopengl32  -lgdi32  -lwinmm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_PATH = -L"P:/1.From Git/_LIBS/raylib-master/build/raylib"
   OBJECT_DIR = CMakeFiles\Tetris.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

@@ -344,30 +344,6 @@ app/colors/Colors.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/colors/Colors.cpp.s
 .PHONY : app/colors/Colors.cpp.s
 
-app/game/Game.obj: app/game/Game.cpp.obj
-.PHONY : app/game/Game.obj
-
-# target to build an object file
-app/game/Game.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/game/Game.cpp.obj
-.PHONY : app/game/Game.cpp.obj
-
-app/game/Game.i: app/game/Game.cpp.i
-.PHONY : app/game/Game.i
-
-# target to preprocess a source file
-app/game/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/game/Game.cpp.i
-.PHONY : app/game/Game.cpp.i
-
-app/game/Game.s: app/game/Game.cpp.s
-.PHONY : app/game/Game.s
-
-# target to generate assembly for a file
-app/game/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Tetris.dir\build.make CMakeFiles/Tetris.dir/app/game/Game.cpp.s
-.PHONY : app/game/Game.cpp.s
-
 app/grid/Grid.obj: app/grid/Grid.cpp.obj
 .PHONY : app/grid/Grid.obj
 
@@ -476,9 +452,6 @@ help:
 	@echo ... app/colors/Colors.obj
 	@echo ... app/colors/Colors.i
 	@echo ... app/colors/Colors.s
-	@echo ... app/game/Game.obj
-	@echo ... app/game/Game.i
-	@echo ... app/game/Game.s
 	@echo ... app/grid/Grid.obj
 	@echo ... app/grid/Grid.i
 	@echo ... app/grid/Grid.s
