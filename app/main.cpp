@@ -5,7 +5,6 @@
 
 using namespace tetris;
 
-// Функция для контроля интервала между обновлениями (таймер)
 bool eventTriggered(double interval)
     {
         static double lastUpdateTime = 0.0;
@@ -20,11 +19,9 @@ bool eventTriggered(double interval)
 
 int main()
     {
-        // Инициализация окна
         InitWindow(kWindowWidth, kWindowHeight, "Tetris by C++");
         SetTargetFPS(kTargetFPS);
 
-        // Загрузка шрифта
         Font font = LoadFontEx(kFontFile, 64, nullptr, 0);
 
         Game game;
@@ -42,7 +39,6 @@ int main()
                 BeginDrawing();
                 ClearBackground(kDarkBlue);
 
-                // Отрисовка UI (очки, следующая фигура, сообщение GAME OVER)
                 DrawTextEx(font, "Score", {
                                static_cast<float>(kXUiTextPosition),
                                static_cast<float>(kYUiTextPosition)

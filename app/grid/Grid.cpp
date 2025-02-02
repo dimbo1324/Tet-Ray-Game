@@ -103,4 +103,4 @@ namespace tetris
                         clearRow(row);
                     }
             }
-    } // namespace tetris
+    }

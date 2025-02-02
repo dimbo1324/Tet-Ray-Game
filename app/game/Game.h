@@ -16,16 +16,12 @@ namespace tetris
 
                 ~Game();
 
-                // Отрисовка элементов игры
                 void draw();
 
-                // Обработка ввода пользователя
                 void handleInput();
 
-                // Перемещение текущего блока вниз (вызывается с определённой периодичностью)
                 void moveBlockDown();
 
-                // Состояние игры
                 bool gameOver;
                 int gameScore;
                 Music music;
@@ -57,6 +53,6 @@ namespace tetris
                 std::mt19937 randomEngine;
                 Sound rotateSound, clearSound;
             };
-    } // namespace tetris
+    }
 
-#endif // GAME_H
+#endif

@@ -20,7 +20,6 @@ namespace tetris
                 music = LoadMusicStream(kMusicFile);
                 if (music.stream.buffer == nullptr)
                     {
-                        // Вывести сообщение об ошибке или выполнить альтернативное действие
                         TraceLog(LOG_WARNING, "Couldn't upload music file: %s",
                                  kMusicFile);
                     }
